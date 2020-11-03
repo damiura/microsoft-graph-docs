@@ -7,7 +7,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 ProjectParticipation projectParticipation = new ProjectParticipation();
-projectParticipation.allowedAudiences = AllowedAudiences.ORGANIZATION;
+projectParticipation.allowedAudiences = EnumSet.of(AllowedAudiences.ORGANIZATION);
 CompanyDetail client = new CompanyDetail();
 client.department = "Corporate Marketing";
 client.webUrl = "https://www.contoso.com";

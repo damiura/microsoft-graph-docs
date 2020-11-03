@@ -15,7 +15,7 @@ encryption.secret = "secret-value";
 workforceIntegration.encryption = encryption;
 workforceIntegration.isActive = true;
 workforceIntegration.url = "url-value";
-workforceIntegration.supports = WorkforceIntegrationSupportedEntities.NONE;
+workforceIntegration.supports = EnumSet.of(WorkforceIntegrationSupportedEntities.NONE);
 
 graphClient.teamwork().workforceIntegrations()
 	.buildRequest()

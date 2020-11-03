@@ -21,7 +21,7 @@ identityProvider.claimsMapping = claimsMapping;
 identityProvider.domainHint = "mycustomoidc";
 identityProvider.metadataUrl = "https://mycustomoidc.com/.well-known/openid-configuration";
 identityProvider.responseMode = OpenIdConnectResponseMode.FORM_POST;
-identityProvider.responseType = OpenIdConnectResponseTypes.CODE;
+identityProvider.responseType = EnumSet.of(OpenIdConnectResponseTypes.CODE);
 identityProvider.scope = "openid";
 
 graphClient.identityProviders()

@@ -7,7 +7,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 LanguageProficiency languageProficiency = new LanguageProficiency();
-languageProficiency.allowedAudiences = AllowedAudiences.ORGANIZATION;
+languageProficiency.allowedAudiences = EnumSet.of(AllowedAudiences.ORGANIZATION);
 
 graphClient.me().profile().languages("{id}")
 	.buildRequest()

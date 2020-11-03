@@ -7,7 +7,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 IdentityProvider identityProvider = new IdentityProvider();
-identityProvider.responseType = OpenIdConnectResponseTypes.ID_TOKEN;
+identityProvider.responseType = EnumSet.of(OpenIdConnectResponseTypes.ID_TOKEN);
 
 graphClient.identityProviders("OIDC-V1-MyTest-085a8a0c-58cb-4b6d-8e07-1328ea404e1a")
 	.buildRequest()

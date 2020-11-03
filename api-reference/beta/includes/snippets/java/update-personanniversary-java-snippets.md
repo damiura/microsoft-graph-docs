@@ -7,7 +7,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider( authProvider ).buildClient();
 
 PersonAnniversary personAnniversary = new PersonAnniversary();
-personAnniversary.allowedAudiences = AllowedAudiences.CONTACTS;
+personAnniversary.allowedAudiences = EnumSet.of(AllowedAudiences.CONTACTS);
 
 graphClient.me().profile().anniversaries("{id}")
 	.buildRequest()
